@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import ErrorWrapper from "@/app/error-wrapper";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        {children}
+        <ErrorWrapper>{children}</ErrorWrapper>
         <Footer />
       </body>
     </html>
